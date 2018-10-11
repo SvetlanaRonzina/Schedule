@@ -17,9 +17,12 @@ namespace Schedule
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnSolve_Click(object sender, EventArgs e)
         {
-
+            string text = rtbWorks.Text;
+            int workersCount = int.Parse(tbWorkersCount.Text);
+            int pointsCount = int.Parse(tbPointsCount.Text);
+            char?[,] result = Solver.Solve(text, workersCount, pointsCount);
         }
     }
 }
